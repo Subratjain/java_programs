@@ -1,0 +1,51 @@
+import java.util.*;
+public class selection_sort_with_array {
+static int arr[],size,data;
+    public void array()
+    {
+        Scanner sc = new Scanner(System.in);
+        size = sc.nextInt();
+         arr = new int[size];
+        for(int i = 0;i <= size-1;i++)
+        {                                                          
+            arr[i]=sc.nextInt();
+            
+        }
+    } 
+    
+    public void selection()
+    {
+        for(int i=0;i<=size-1;i++)
+        {
+            int min = i;
+            for(int j=i+1;j<=size-1;j++)
+            {
+                if(arr[j]<arr[min])
+                {
+                   min = j; 
+                }    
+            }
+            int temp = arr[i];
+            arr[i] =  arr[min];
+            arr[min] = temp;
+        }
+    }
+    
+    public static void main(String args[])
+    { 
+         
+        selection_sort_with_array obj = new selection_sort_with_array();
+        obj.array();
+        obj.selection();
+         for(int i=0;i<size;i++)
+        {
+           
+                System.out.println(arr[i]);
+            
+        }
+        
+        
+        
+    }
+    
+}
