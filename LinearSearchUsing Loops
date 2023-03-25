@@ -1,0 +1,41 @@
+import java.util.*;
+public class linear_search {
+    int size,arr[];
+    public void array()
+    {
+        Scanner sc = new Scanner(System.in);
+        size = sc.nextInt();
+        arr = new int[size];
+        
+                 for(int i=0;i<size;i++)
+                 {
+                    arr[i] = sc.nextInt();
+                 }
+                 
+        
+    }
+    public void search(int value)
+    {
+      int flag=0;
+        for(int i=0;i<=size;i++)
+        {
+            if(arr[i]==value)
+            {
+                 System.out.println("value found");
+                 flag=1;
+                 break;
+            }
+        }
+            if(flag==0){ 
+                System.out.println("not found");
+        }
+       
+    }
+    public static void main(String args[])
+    {
+        linear_search obj = new linear_search();
+        obj.array();
+       obj.search(5);
+    }
+    
+}
