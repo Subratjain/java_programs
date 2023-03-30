@@ -1,0 +1,28 @@
+import java.util.*;
+public class fibonacci_series {
+    static int num,c,count=2;
+    public void print(int a,int b)
+    {
+        while(count<num)
+        {
+          c = a+b;
+          a = b;
+          b = c;
+          System.out.print(c + " ");
+          count++;
+        }
+    }
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        fibonacci_series obj = new fibonacci_series();
+        num = sc.nextInt();
+        int a=0,b=1;
+        System.out.print(a + " " + b + " ");
+        obj.print(a,b);
+    }
+
+   
+                                                                                                                                    
+    
+}
