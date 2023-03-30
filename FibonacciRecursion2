@@ -1,0 +1,30 @@
+import java.util.*;
+public class fibonacciusingrecursion {
+    static int n;
+   
+    public void fibonacci(int a,int b)
+    {
+        int c = b;
+        b = a+b;
+        System.out.print(b + " ");
+        a = c;
+        n--;
+        if(n>2)
+        {
+             fibonacci(a,b);
+        }
+        
+    }
+    public static void main(String args[])
+    {
+        fibonacciusingrecursion obj = new fibonacciusingrecursion(); 
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        int a=0,b=1;
+        System.out.print(a + " " + b + " " );
+        obj.fibonacci(a,b);
+        
+        
+    }
+    
+}
