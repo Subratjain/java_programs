@@ -1,0 +1,21 @@
+import java.util.*;
+public class factorial_simple {
+    int fact =1,n;
+    public void factorial()
+    {
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            fact = fact * i;
+            
+        }
+        System.out.println(fact);
+    }
+    public static void main(String args[])
+    {
+        factorial_simple obj = new factorial_simple();
+        obj.factorial();
+    }
+    
+}
